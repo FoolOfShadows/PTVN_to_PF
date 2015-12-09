@@ -1,0 +1,494 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		796CE4DA1C187A35003C35E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796CE4D91C187A35003C35E8 /* AppDelegate.swift */; };
+		796CE4DC1C187A35003C35E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 796CE4DB1C187A35003C35E8 /* Assets.xcassets */; };
+		796CE4DF1C187A35003C35E8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 796CE4DD1C187A35003C35E8 /* MainMenu.xib */; };
+		796CE4EA1C187A35003C35E8 /* PTVN_to_PFTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796CE4E91C187A35003C35E8 /* PTVN_to_PFTests.swift */; };
+		796CE4F51C187A35003C35E8 /* PTVN_to_PFUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796CE4F41C187A35003C35E8 /* PTVN_to_PFUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		796CE4E61C187A35003C35E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 796CE4CE1C187A35003C35E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 796CE4D51C187A35003C35E8;
+			remoteInfo = "PTVN to PF";
+		};
+		796CE4F11C187A35003C35E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 796CE4CE1C187A35003C35E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 796CE4D51C187A35003C35E8;
+			remoteInfo = "PTVN to PF";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		796CE4D61C187A35003C35E8 /* PTVN to PF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PTVN to PF.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		796CE4D91C187A35003C35E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		796CE4DB1C187A35003C35E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		796CE4DE1C187A35003C35E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		796CE4E01C187A35003C35E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		796CE4E51C187A35003C35E8 /* PTVN to PFTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PTVN to PFTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		796CE4E91C187A35003C35E8 /* PTVN_to_PFTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTVN_to_PFTests.swift; sourceTree = "<group>"; };
+		796CE4EB1C187A35003C35E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		796CE4F01C187A35003C35E8 /* PTVN to PFUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PTVN to PFUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		796CE4F41C187A35003C35E8 /* PTVN_to_PFUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTVN_to_PFUITests.swift; sourceTree = "<group>"; };
+		796CE4F61C187A35003C35E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		796CE4D31C187A35003C35E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		796CE4E21C187A35003C35E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		796CE4ED1C187A35003C35E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		796CE4CD1C187A35003C35E8 = {
+			isa = PBXGroup;
+			children = (
+				796CE4D81C187A35003C35E8 /* PTVN to PF */,
+				796CE4E81C187A35003C35E8 /* PTVN to PFTests */,
+				796CE4F31C187A35003C35E8 /* PTVN to PFUITests */,
+				796CE4D71C187A35003C35E8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		796CE4D71C187A35003C35E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				796CE4D61C187A35003C35E8 /* PTVN to PF.app */,
+				796CE4E51C187A35003C35E8 /* PTVN to PFTests.xctest */,
+				796CE4F01C187A35003C35E8 /* PTVN to PFUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		796CE4D81C187A35003C35E8 /* PTVN to PF */ = {
+			isa = PBXGroup;
+			children = (
+				796CE4D91C187A35003C35E8 /* AppDelegate.swift */,
+				796CE4DB1C187A35003C35E8 /* Assets.xcassets */,
+				796CE4DD1C187A35003C35E8 /* MainMenu.xib */,
+				796CE4E01C187A35003C35E8 /* Info.plist */,
+			);
+			path = "PTVN to PF";
+			sourceTree = "<group>";
+		};
+		796CE4E81C187A35003C35E8 /* PTVN to PFTests */ = {
+			isa = PBXGroup;
+			children = (
+				796CE4E91C187A35003C35E8 /* PTVN_to_PFTests.swift */,
+				796CE4EB1C187A35003C35E8 /* Info.plist */,
+			);
+			path = "PTVN to PFTests";
+			sourceTree = "<group>";
+		};
+		796CE4F31C187A35003C35E8 /* PTVN to PFUITests */ = {
+			isa = PBXGroup;
+			children = (
+				796CE4F41C187A35003C35E8 /* PTVN_to_PFUITests.swift */,
+				796CE4F61C187A35003C35E8 /* Info.plist */,
+			);
+			path = "PTVN to PFUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		796CE4D51C187A35003C35E8 /* PTVN to PF */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 796CE4F91C187A35003C35E8 /* Build configuration list for PBXNativeTarget "PTVN to PF" */;
+			buildPhases = (
+				796CE4D21C187A35003C35E8 /* Sources */,
+				796CE4D31C187A35003C35E8 /* Frameworks */,
+				796CE4D41C187A35003C35E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PTVN to PF";
+			productName = "PTVN to PF";
+			productReference = 796CE4D61C187A35003C35E8 /* PTVN to PF.app */;
+			productType = "com.apple.product-type.application";
+		};
+		796CE4E41C187A35003C35E8 /* PTVN to PFTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 796CE4FC1C187A35003C35E8 /* Build configuration list for PBXNativeTarget "PTVN to PFTests" */;
+			buildPhases = (
+				796CE4E11C187A35003C35E8 /* Sources */,
+				796CE4E21C187A35003C35E8 /* Frameworks */,
+				796CE4E31C187A35003C35E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				796CE4E71C187A35003C35E8 /* PBXTargetDependency */,
+			);
+			name = "PTVN to PFTests";
+			productName = "PTVN to PFTests";
+			productReference = 796CE4E51C187A35003C35E8 /* PTVN to PFTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		796CE4EF1C187A35003C35E8 /* PTVN to PFUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 796CE4FF1C187A35003C35E8 /* Build configuration list for PBXNativeTarget "PTVN to PFUITests" */;
+			buildPhases = (
+				796CE4EC1C187A35003C35E8 /* Sources */,
+				796CE4ED1C187A35003C35E8 /* Frameworks */,
+				796CE4EE1C187A35003C35E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				796CE4F21C187A35003C35E8 /* PBXTargetDependency */,
+			);
+			name = "PTVN to PFUITests";
+			productName = "PTVN to PFUITests";
+			productReference = 796CE4F01C187A35003C35E8 /* PTVN to PFUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		796CE4CE1C187A35003C35E8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Fulgent Wake";
+				TargetAttributes = {
+					796CE4D51C187A35003C35E8 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					796CE4E41C187A35003C35E8 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 796CE4D51C187A35003C35E8;
+					};
+					796CE4EF1C187A35003C35E8 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 796CE4D51C187A35003C35E8;
+					};
+				};
+			};
+			buildConfigurationList = 796CE4D11C187A35003C35E8 /* Build configuration list for PBXProject "PTVN to PF" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 796CE4CD1C187A35003C35E8;
+			productRefGroup = 796CE4D71C187A35003C35E8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				796CE4D51C187A35003C35E8 /* PTVN to PF */,
+				796CE4E41C187A35003C35E8 /* PTVN to PFTests */,
+				796CE4EF1C187A35003C35E8 /* PTVN to PFUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		796CE4D41C187A35003C35E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				796CE4DC1C187A35003C35E8 /* Assets.xcassets in Resources */,
+				796CE4DF1C187A35003C35E8 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		796CE4E31C187A35003C35E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		796CE4EE1C187A35003C35E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		796CE4D21C187A35003C35E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				796CE4DA1C187A35003C35E8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		796CE4E11C187A35003C35E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				796CE4EA1C187A35003C35E8 /* PTVN_to_PFTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		796CE4EC1C187A35003C35E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				796CE4F51C187A35003C35E8 /* PTVN_to_PFUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		796CE4E71C187A35003C35E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 796CE4D51C187A35003C35E8 /* PTVN to PF */;
+			targetProxy = 796CE4E61C187A35003C35E8 /* PBXContainerItemProxy */;
+		};
+		796CE4F21C187A35003C35E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 796CE4D51C187A35003C35E8 /* PTVN to PF */;
+			targetProxy = 796CE4F11C187A35003C35E8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		796CE4DD1C187A35003C35E8 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				796CE4DE1C187A35003C35E8 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		796CE4F71C187A35003C35E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		796CE4F81C187A35003C35E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		796CE4FA1C187A35003C35E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "PTVN to PF/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fulgentwake.PTVN-to-PF";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		796CE4FB1C187A35003C35E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "PTVN to PF/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fulgentwake.PTVN-to-PF";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		796CE4FD1C187A35003C35E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "PTVN to PFTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fulgentwake.PTVN-to-PFTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PTVN to PF.app/Contents/MacOS/PTVN to PF";
+			};
+			name = Debug;
+		};
+		796CE4FE1C187A35003C35E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "PTVN to PFTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fulgentwake.PTVN-to-PFTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PTVN to PF.app/Contents/MacOS/PTVN to PF";
+			};
+			name = Release;
+		};
+		796CE5001C187A35003C35E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "PTVN to PFUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fulgentwake.PTVN-to-PFUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "PTVN to PF";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		796CE5011C187A35003C35E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "PTVN to PFUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fulgentwake.PTVN-to-PFUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "PTVN to PF";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		796CE4D11C187A35003C35E8 /* Build configuration list for PBXProject "PTVN to PF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				796CE4F71C187A35003C35E8 /* Debug */,
+				796CE4F81C187A35003C35E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		796CE4F91C187A35003C35E8 /* Build configuration list for PBXNativeTarget "PTVN to PF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				796CE4FA1C187A35003C35E8 /* Debug */,
+				796CE4FB1C187A35003C35E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		796CE4FC1C187A35003C35E8 /* Build configuration list for PBXNativeTarget "PTVN to PFTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				796CE4FD1C187A35003C35E8 /* Debug */,
+				796CE4FE1C187A35003C35E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		796CE4FF1C187A35003C35E8 /* Build configuration list for PBXNativeTarget "PTVN to PFUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				796CE5001C187A35003C35E8 /* Debug */,
+				796CE5011C187A35003C35E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 796CE4CE1C187A35003C35E8 /* Project object */;
+}
