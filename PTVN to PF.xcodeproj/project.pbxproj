@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79639A1B1C1F21CF007262E2 /* Parsing Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79639A1A1C1F21CF007262E2 /* Parsing Variables.swift */; };
 		796CE4DA1C187A35003C35E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796CE4D91C187A35003C35E8 /* AppDelegate.swift */; };
 		796CE4DC1C187A35003C35E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 796CE4DB1C187A35003C35E8 /* Assets.xcassets */; };
 		796CE4DF1C187A35003C35E8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 796CE4DD1C187A35003C35E8 /* MainMenu.xib */; };
 		796CE4EA1C187A35003C35E8 /* PTVN_to_PFTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796CE4E91C187A35003C35E8 /* PTVN_to_PFTests.swift */; };
 		796CE4F51C187A35003C35E8 /* PTVN_to_PFUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796CE4F41C187A35003C35E8 /* PTVN_to_PFUITests.swift */; };
+		796CE5041C187ABA003C35E8 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796CE5021C187ABA003C35E8 /* MainWindowController.swift */; };
+		796CE5051C187ABA003C35E8 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 796CE5031C187ABA003C35E8 /* MainWindowController.xib */; };
+		79DE424E1C21A89200DDFF07 /* DragAndDropZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DE424D1C21A89200DDFF07 /* DragAndDropZone.swift */; };
+		79E84B8F1C1B3F0E00BFCBDF /* Parsing Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E84B8E1C1B3F0E00BFCBDF /* Parsing Functions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		79639A1A1C1F21CF007262E2 /* Parsing Variables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Parsing Variables.swift"; sourceTree = "<group>"; };
 		796CE4D61C187A35003C35E8 /* PTVN to PF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PTVN to PF.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		796CE4D91C187A35003C35E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		796CE4DB1C187A35003C35E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,6 +49,10 @@
 		796CE4F01C187A35003C35E8 /* PTVN to PFUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PTVN to PFUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		796CE4F41C187A35003C35E8 /* PTVN_to_PFUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTVN_to_PFUITests.swift; sourceTree = "<group>"; };
 		796CE4F61C187A35003C35E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		796CE5021C187ABA003C35E8 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		796CE5031C187ABA003C35E8 /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
+		79DE424D1C21A89200DDFF07 /* DragAndDropZone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragAndDropZone.swift; sourceTree = "<group>"; };
+		79E84B8E1C1B3F0E00BFCBDF /* Parsing Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Parsing Functions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,10 +103,15 @@
 		796CE4D81C187A35003C35E8 /* PTVN to PF */ = {
 			isa = PBXGroup;
 			children = (
+				796CE5021C187ABA003C35E8 /* MainWindowController.swift */,
+				796CE5031C187ABA003C35E8 /* MainWindowController.xib */,
 				796CE4D91C187A35003C35E8 /* AppDelegate.swift */,
 				796CE4DB1C187A35003C35E8 /* Assets.xcassets */,
-				796CE4DD1C187A35003C35E8 /* MainMenu.xib */,
 				796CE4E01C187A35003C35E8 /* Info.plist */,
+				796CE4DD1C187A35003C35E8 /* MainMenu.xib */,
+				79E84B8E1C1B3F0E00BFCBDF /* Parsing Functions.swift */,
+				79639A1A1C1F21CF007262E2 /* Parsing Variables.swift */,
+				79DE424D1C21A89200DDFF07 /* DragAndDropZone.swift */,
 			);
 			path = "PTVN to PF";
 			sourceTree = "<group>";
@@ -224,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				796CE4DC1C187A35003C35E8 /* Assets.xcassets in Resources */,
+				796CE5051C187ABA003C35E8 /* MainWindowController.xib in Resources */,
 				796CE4DF1C187A35003C35E8 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,7 +265,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				796CE5041C187ABA003C35E8 /* MainWindowController.swift in Sources */,
+				79E84B8F1C1B3F0E00BFCBDF /* Parsing Functions.swift in Sources */,
+				79DE424E1C21A89200DDFF07 /* DragAndDropZone.swift in Sources */,
 				796CE4DA1C187A35003C35E8 /* AppDelegate.swift in Sources */,
+				79639A1B1C1F21CF007262E2 /* Parsing Variables.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +491,7 @@
 				796CE4FB1C187A35003C35E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		796CE4FC1C187A35003C35E8 /* Build configuration list for PBXNativeTarget "PTVN to PFTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +500,7 @@
 				796CE4FE1C187A35003C35E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		796CE4FF1C187A35003C35E8 /* Build configuration list for PBXNativeTarget "PTVN to PFUITests" */ = {
 			isa = XCConfigurationList;
@@ -487,6 +509,7 @@
 				796CE5011C187A35003C35E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
