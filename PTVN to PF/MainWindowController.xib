@@ -53,7 +53,7 @@
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="56T-na-vUf">
                                 <rect key="frame" x="117" y="711" width="142" height="32"/>
-                                <buttonCell key="cell" type="push" title="More Processing" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="eLy-hS-KTp">
+                                <buttonCell key="cell" type="push" title="More Processing" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="eLy-hS-KTp">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -412,7 +412,7 @@ PMH</string>
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
             </connections>
-            <point key="canvasLocation" x="118.5" y="508.5"/>
+            <point key="canvasLocation" x="144.5" y="506.5"/>
         </window>
         <customObject id="djf-kn-Qhd" customClass="DragAndDropZone" customModule="PTVN_to_PF" customModuleProvider="target"/>
     </objects>

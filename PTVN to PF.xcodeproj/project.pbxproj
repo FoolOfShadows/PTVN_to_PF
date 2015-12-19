@@ -15,6 +15,7 @@
 		796CE4F51C187A35003C35E8 /* PTVN_to_PFUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796CE4F41C187A35003C35E8 /* PTVN_to_PFUITests.swift */; };
 		796CE5041C187ABA003C35E8 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796CE5021C187ABA003C35E8 /* MainWindowController.swift */; };
 		796CE5051C187ABA003C35E8 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 796CE5031C187ABA003C35E8 /* MainWindowController.xib */; };
+		7993326D1C25E216009C48D3 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993326C1C25E216009C48D3 /* GlobalVariables.swift */; };
 		79DE424E1C21A89200DDFF07 /* DragAndDropZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DE424D1C21A89200DDFF07 /* DragAndDropZone.swift */; };
 		79E84B8F1C1B3F0E00BFCBDF /* Parsing Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E84B8E1C1B3F0E00BFCBDF /* Parsing Functions.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,7 @@
 		796CE4F61C187A35003C35E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		796CE5021C187ABA003C35E8 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		796CE5031C187ABA003C35E8 /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
+		7993326C1C25E216009C48D3 /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		79DE424D1C21A89200DDFF07 /* DragAndDropZone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragAndDropZone.swift; sourceTree = "<group>"; };
 		79E84B8E1C1B3F0E00BFCBDF /* Parsing Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Parsing Functions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +114,7 @@
 				79E84B8E1C1B3F0E00BFCBDF /* Parsing Functions.swift */,
 				79639A1A1C1F21CF007262E2 /* Parsing Variables.swift */,
 				79DE424D1C21A89200DDFF07 /* DragAndDropZone.swift */,
+				7993326C1C25E216009C48D3 /* GlobalVariables.swift */,
 			);
 			path = "PTVN to PF";
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7993326D1C25E216009C48D3 /* GlobalVariables.swift in Sources */,
 				796CE5041C187ABA003C35E8 /* MainWindowController.swift in Sources */,
 				79E84B8F1C1B3F0E00BFCBDF /* Parsing Functions.swift in Sources */,
 				79DE424E1C21A89200DDFF07 /* DragAndDropZone.swift in Sources */,

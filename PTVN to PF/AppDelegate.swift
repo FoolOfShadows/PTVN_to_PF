@@ -12,7 +12,7 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
 	var mainWindowController: MainWindowController?
-
+	var globalVars = GlobalVars()
 
 	func applicationDidFinishLaunching(aNotification: NSNotification) {
 		//Create an instance of the MainWindowController class pointing to the name of the

@@ -31,17 +31,29 @@ class MainWindowController: NSWindowController, NSDraggingDestination {
 			didSet {
 				if mwcSwitch == 0 {
 					print("Switch accepted")
+					do {
+						var dadText = GlobalVars()
+						dadText.ptvnText = try String(contentsOfFile: mwcFileName, encoding: NSUTF8StringEncoding)
+						dadText.ptvnURL = mwcFileName
+						print(dadText.ptvnText)
+						let processedText = processPTVNText(dadText.ptvnText)
+						//getFileNameFromFilePath()
+					} catch {
+						print("Try failed again")
+					}
+				}
+					
 				}
 			}
 		}
-	}
-	
-	
+
+	var theFilePath: String {return dragAndDropZone.droppedFilePath}
 	
     override func windowDidLoad() {
         super.windowDidLoad()
 		originLabel.stringValue = "Choose a file"
 		MWCStruct.mwcSwitch = 1
+		
 
         // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
     }
@@ -121,7 +133,6 @@ class MainWindowController: NSWindowController, NSDraggingDestination {
 			objectiveTextView.string = processedText.objective
 		}
 	}
-	
 
     
 }

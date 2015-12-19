@@ -111,7 +111,5 @@ func processPTVNText(theText: String) -> (cc: String, subjective: String, proble
 	return (cheifComplaint, subjectiveText, problemsText, newPMHText, assessmentText, planText, objectiveText)
 }
 
-func getFileNameFromFilePath() {
-	
-}
+
 
