@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class MainWindowController: NSWindowController, NSDraggingDestination {
+class MainWindowController: NSWindowController, NSDraggingDestination, NSWindowDelegate {
 	
 	@IBOutlet weak var dragAndDropZone: DragAndDropZone!
 	@IBOutlet weak var originLabel: NSTextField!
@@ -23,29 +23,10 @@ class MainWindowController: NSWindowController, NSDraggingDestination {
 
 	var theFileURL:String = ""
 	var readInText = ""
+	
+	static var theFileLabelName = ""
 
-	struct MWCStruct {
-		static var mwcFileName = String()
-		static var mwcFileURL = NSURL()
-		static var mwcSwitch: Int = 1 {
-			didSet {
-				if mwcSwitch == 0 {
-					print("Switch accepted")
-					do {
-						var dadText = GlobalVars()
-						dadText.ptvnText = try String(contentsOfFile: mwcFileName, encoding: NSUTF8StringEncoding)
-						dadText.ptvnURL = mwcFileName
-						print(dadText.ptvnText)
-						let processedText = processPTVNText(dadText.ptvnText)
-						//getFileNameFromFilePath()
-					} catch {
-						print("Try failed again")
-					}
-				}
-					
-				}
-			}
-		}
+
 
 	var theFilePath: String {return dragAndDropZone.droppedFilePath}
 	
@@ -58,9 +39,26 @@ class MainWindowController: NSWindowController, NSDraggingDestination {
         // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
     }
 	
+//	override func awakeFromNib() {
+//		if MWCStruct.mwcSwitch == 0 {
+//			showTheFileName()
+//		}
+//	}
 	
+	func windowDidBecomeKey(notification: NSNotification) {
+		var timer = NSTimer()
+		if MWCStruct.mwcSwitch == 0 {
+			showTheFileName()
+			timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "showTheFileName", userInfo: nil, repeats: false)
+			takeProcess(self)
+		}
+	}
 	
 	@IBAction func takeClear(sender: AnyObject) {
+		MWCStruct.mwcFileName = ""
+		originLabel.stringValue = "Choose a file"
+		MWCStruct.mwcFileName = ""
+		readInText = ""
 		ccTextView.string = ""
 		subjectiveTextView.string = ""
 		problemsTextView.string = ""
@@ -134,5 +132,61 @@ class MainWindowController: NSWindowController, NSDraggingDestination {
 		}
 	}
 
+	func showTheFileName() {
+		let theFilePath = MWCStruct.mwcFileName
+		if theFilePath != "" {
+			let pathComponents = theFilePath.componentsSeparatedByString("/")
+			let theFileName = pathComponents.last
+			originLabel.stringValue = theFileName!
+			do {
+				self.readInText = try String(contentsOfFile: MWCStruct.mwcFileName, encoding: NSUTF8StringEncoding)
+			} catch {
+				print("Try failed again")
+			}
+		}
+		
+	}
+	
+	@IBAction func takeCopyCC(sender: AnyObject) {
+		let myPasteboard = NSPasteboard.generalPasteboard()
+		myPasteboard.clearContents()
+		myPasteboard.setString(ccTextView.string!, forType: NSPasteboardTypeString)
+	}
+	
+	@IBAction func takeCopySubjective(sender: AnyObject) {
+		let myPasteboard = NSPasteboard.generalPasteboard()
+		myPasteboard.clearContents()
+		myPasteboard.setString(subjectiveTextView.string!, forType: NSPasteboardTypeString)
+	}
+	
+	@IBAction func takeCopyObjective(sender: AnyObject) {
+		let myPasteboard = NSPasteboard.generalPasteboard()
+		myPasteboard.clearContents()
+		myPasteboard.setString(objectiveTextView.string!, forType: NSPasteboardTypeString)
+	}
+	
+	@IBAction func takeCopyAssessment(sender: AnyObject) {
+		let myPasteboard = NSPasteboard.generalPasteboard()
+		myPasteboard.clearContents()
+		myPasteboard.setString(assessmentTextView.string!, forType: NSPasteboardTypeString)
+	}
+	
+	@IBAction func takeCopyPlan(sender: AnyObject) {
+		let myPasteboard = NSPasteboard.generalPasteboard()
+		myPasteboard.clearContents()
+		myPasteboard.setString(planTextView.string!, forType: NSPasteboardTypeString)
+	}
+	
+	@IBAction func takeCopyProblem(sender: AnyObject) {
+		let myPasteboard = NSPasteboard.generalPasteboard()
+		myPasteboard.clearContents()
+		myPasteboard.setString(problemsTextView.string!, forType: NSPasteboardTypeString)
+	}
+	
+	@IBAction func takeCopyNewPMH(sender: AnyObject) {
+		let myPasteboard = NSPasteboard.generalPasteboard()
+		myPasteboard.clearContents()
+		myPasteboard.setString(newPMHTextView.string!, forType: NSPasteboardTypeString)
+	}
     
 }

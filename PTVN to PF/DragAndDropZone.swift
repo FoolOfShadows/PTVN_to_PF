@@ -67,9 +67,11 @@ class DragAndDropZone: NSView, NSWindowDelegate {
 		let board = sender!.draggingPasteboard().propertyListForType("NSFilenamesPboardType") as? NSArray
 		if board != [] {
 			droppedFilePath = board![0] as! String
-			MainWindowController.MWCStruct.mwcFileName = board![0] as! String
-			Swift.print(MainWindowController.MWCStruct.mwcFileName)
-			MainWindowController.MWCStruct.mwcSwitch = 0
+			//MWCStruct.mwcFileURL = board![0]
+			MWCStruct.mwcFileName = board![0] as! String
+			Swift.print(MWCStruct.mwcFileName)
+			MWCStruct.mwcSwitch = 0
+			
 		}
 		//Swift.print(board)
 		return true
@@ -101,5 +103,5 @@ class DragAndDropZone: NSView, NSWindowDelegate {
 		}
 		return false
 	}
-
+	
 }
