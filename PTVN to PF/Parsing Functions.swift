@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import AppKit
 
 //Cribbed from raywenderlich.com.  Updated for Swift 2.0
 extension String {
@@ -51,23 +52,19 @@ func processPTVNText(theText: String) -> (cc: String, subjective: String, proble
 	
 	print("Getting the CC\n")
 	cheifComplaint = regexTheText(theText, startOfText: ccBeginning, endOfText: ccEnding)
-	cheifComplaint = cheifComplaint.stringByReplacingOccurrencesOfString("\nS:", withString: "")
-	cheifComplaint = cheifComplaint.stringByTrimmingLeadingAndTrailingWhitespace()
+	cheifComplaint = cleanUpText(cheifComplaint, theWords: ["\nS:"])
 	
 	print("Getting subjective/n")
 	subjectiveText = regexTheText(theText, startOfText: subjectiveBeginning, endOfText: subjectiveEnding)
-	subjectiveText = subjectiveText.stringByReplacingOccurrencesOfString("\nProblems:", withString: "")
-	subjectiveText = subjectiveText.stringByTrimmingLeadingAndTrailingWhitespace()
+	subjectiveText = cleanUpText(subjectiveText, theWords: ["\nProblems:"])
 	
 	print("Getting problems/n")
 	problemsText = regexTheText(theText, startOfText: problemsBeginning, endOfText: problemsEnding)
-	problemsText = problemsText.stringByReplacingOccurrencesOfString("\nNEW PMH:", withString: "")
-	problemsText = problemsText.stringByTrimmingLeadingAndTrailingWhitespace()
+	problemsText = cleanUpText(problemsText, theWords: ["\nNEW PMH:"])
 	
 	print("Getting new PMH/n")
 	newPMHText = regexTheText(theText, startOfText: newPMHBeginning, endOfText: newPMHEnding)
-	newPMHText = newPMHText.stringByReplacingOccurrencesOfString("\nA(Charge):", withString: "")
-	newPMHText = newPMHText.stringByTrimmingLeadingAndTrailingWhitespace()
+	newPMHText = cleanUpText(newPMHText, theWords: ["\nA(Charge):"])
 	
 	print("Getting assessment/n")
 	if theText.containsString("A(Charge):") {
@@ -77,8 +74,7 @@ func processPTVNText(theText: String) -> (cc: String, subjective: String, proble
 		print("Old assessment version")
 		assessmentText = regexTheText(theText, startOfText: oldAssessmentBeginning, endOfText: assessmentEnding)
 	}
-	assessmentText = assessmentText.stringByReplacingOccurrencesOfString("\nP(lan):", withString: "")
-	assessmentText = assessmentText.stringByTrimmingLeadingAndTrailingWhitespace()
+	assessmentText = cleanUpText(assessmentText, theWords: ["\nP(lan):"])
 	
 	print("Getting plan/n")
 	if theText.containsString("O(PE):") {
@@ -86,9 +82,7 @@ func processPTVNText(theText: String) -> (cc: String, subjective: String, proble
 	} else if theText.containsString("O (PE):") {
 		planText = regexTheText(theText, startOfText: planBeginning, endOfText: oldPlanEnding)
 	}
-	planText = planText.stringByReplacingOccurrencesOfString("O(PE):", withString: "")
-	planText = planText.stringByReplacingOccurrencesOfString("O (PE):", withString: "")
-	planText = planText.stringByTrimmingLeadingAndTrailingWhitespace()
+	planText = cleanUpText(planText, theWords: ["O(PE):", "O (PE):"])
 	
 	print("Getting objective/n")
 	if theText.containsString("O(PE):") {
@@ -96,9 +90,7 @@ func processPTVNText(theText: String) -> (cc: String, subjective: String, proble
 	} else if theText.containsString("O (PE):") {
 	objectiveText = regexTheText(theText, startOfText: oldObjectiveBeginning, endOfText: oldObjectiveEnding)
 	}
-	objectiveText = objectiveText.stringByReplacingOccurrencesOfString("\nCURRENT MEDICATIONS:", withString: "")
-	objectiveText = objectiveText.stringByReplacingOccurrencesOfString("\nALLERGIES:", withString: "")
-	objectiveText = objectiveText.stringByTrimmingLeadingAndTrailingWhitespace()
+	objectiveText = cleanUpText(objectiveText, theWords: ["\nCURRENT MEDICATIONS:", "\nALLERGIES:"])
 	
 	print(cheifComplaint)
 	print(subjectiveText)
@@ -111,5 +103,21 @@ func processPTVNText(theText: String) -> (cc: String, subjective: String, proble
 	return (cheifComplaint, subjectiveText, problemsText, newPMHText, assessmentText, planText, objectiveText)
 }
 
+func wordIsSpelledCorrect(word: String) -> Bool {
+	let checker = NSSpellChecker()
+	//let range = NSMakeRange(0, word.characters.count)
+	let wordRange = checker.checkSpellingOfString(word, startingAt: 0)
+	return wordRange.location == NSNotFound
+}
 
+func cleanUpText(theString:String, theWords:[String]) -> String {
+	var returnString = theString
+	for word in theWords {
+		returnString = returnString.stringByReplacingOccurrencesOfString(word, withString: "")
+	}
+	
+	returnString = returnString.stringByTrimmingLeadingAndTrailingWhitespace()
+	
+	return returnString
+}
 
