@@ -33,3 +33,27 @@ let objectiveBeginning = "O\\(PE\\):"
 let oldObjectiveBeginning = "O \\(PE\\)"
 let objectiveEnding = "CURRENT MEDICATIONS:"
 let oldObjectiveEnding = "ALLERGIES:"
+
+let medsBeginning = "CURRENT MEDICATIONS:"
+let medsEnding = "ALLERGIES:"
+
+let allergiesBeginning = "ALLERGIES:"
+let allergiesEnding = "PREVENTIVE CARE:"
+
+let preventiveBeginning = "PREVENTIVE CARE:"
+let preventiveEnding = "PAST MEDICAL HISTORY:"
+
+let pmhBeginning = "PAST MEDICAL HISTORY:"
+let pmhEnding = "PAST SURGICAL HISTORY:"
+
+let pshBeginning = "PAST SURGICAL HISTORY:"
+let pshEnding = "NUTRITION:"
+
+let socialBeginning = "SOCIAL HISTORY:"
+let socialEnding = "FAMILY HEALTH HISTORY:"
+
+let nutritionBeginning = "NUTRITION:"
+let nutritionEnding = "SOCIAL HISTORY:"
+
+let fmhBeginning = "FAMILY HEALTH HISTORY:"
+let fmhEnding = "DIAGNOSES:"

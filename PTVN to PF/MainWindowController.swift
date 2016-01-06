@@ -19,7 +19,7 @@ class MainWindowController: NSWindowController, NSDraggingDestination, NSWindowD
 	@IBOutlet var assessmentTextView: NSTextView!
 	@IBOutlet var planTextView: NSTextView!
 	@IBOutlet var objectiveTextView: NSTextView!
-	
+	@IBOutlet var pmhTextView: NSTextView!
 
 	var theFileURL:String = ""
 	var readInText = ""
@@ -81,7 +81,7 @@ class MainWindowController: NSWindowController, NSDraggingDestination, NSWindowD
 			if returnCode == NSModalResponseOK {
 				//The returned URL array should only have one item in it
 				//Grab that item and put it in a variable
-				var message = panel.URLs[0]
+				let message = panel.URLs[0]
 				//Get the name of the file from URL by breaking the URL
 				//into path components and grabbing the last item
 				//which should be the file name
@@ -122,13 +122,14 @@ class MainWindowController: NSWindowController, NSDraggingDestination, NSWindowD
 		if readInText != "" {
 			print("Processing the text\n")
 			let processedText = processPTVNText(readInText)
-			ccTextView.string = processedText.cc
-			subjectiveTextView.string = processedText.subjective
-			problemsTextView.string = processedText.problems
+			//ccTextView.string = processedText.cc
+			subjectiveTextView.string = "\(processedText.cc)\n\(processedText.problems)\n\(processedText.subjective)"
+			//problemsTextView.string = processedText.problems
 			newPMHTextView.string = processedText.newPMH
 			assessmentTextView.string = processedText.assessment
 			planTextView.string = processedText.plan
 			objectiveTextView.string = processedText.objective
+			pmhTextView.string = "ALLERGIES:\(processedText.allergies)\nPMH:\(processedText.pmh)\nPSH:\(processedText.psh)\nSOCIAL HISTORY:\(processedText.social)\nNUTRITION:\(processedText.nutrition)\nFAMILY HISTORY:\(processedText.fmh)"
 		}
 	}
 
@@ -189,4 +190,9 @@ class MainWindowController: NSWindowController, NSDraggingDestination, NSWindowD
 		myPasteboard.setString(newPMHTextView.string!, forType: NSPasteboardTypeString)
 	}
     
+	@IBAction func takeCopyPMH(sender: AnyObject) {
+		let myPasteboard = NSPasteboard.generalPasteboard()
+		myPasteboard.clearContents()
+		myPasteboard.setString(pmhTextView.string!, forType: NSPasteboardTypeString)
+	}
 }

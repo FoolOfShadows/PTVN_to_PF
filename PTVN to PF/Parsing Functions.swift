@@ -40,7 +40,7 @@ func regexTheText(theText: String, startOfText: String, endOfText: String) -> St
 	return theResult
 }
 
-func processPTVNText(theText: String) -> (cc: String, subjective: String, problems: String, newPMH: String, assessment: String, plan: String, objective: String) {
+func processPTVNText(theText: String) -> (cc: String, subjective: String, problems: String, newPMH: String, assessment: String, plan: String, objective: String, meds: String, allergies: String, preventive: String, pmh: String, psh: String, social: String, nutrition: String, fmh: String) {
 	
 	var cheifComplaint = ""
 	var subjectiveText = ""
@@ -49,6 +49,14 @@ func processPTVNText(theText: String) -> (cc: String, subjective: String, proble
 	var assessmentText = ""
 	var planText = ""
 	var objectiveText = ""
+	var medsText = ""
+	var allergiesText = ""
+	var preventiveText = ""
+	var pmhText = ""
+	var pshText = ""
+	var socialText = ""
+	var nutritionText = ""
+	var fmhText = ""
 	
 	print("Getting the CC\n")
 	cheifComplaint = regexTheText(theText, startOfText: ccBeginning, endOfText: ccEnding)
@@ -92,6 +100,30 @@ func processPTVNText(theText: String) -> (cc: String, subjective: String, proble
 	}
 	objectiveText = cleanUpText(objectiveText, theWords: ["\nCURRENT MEDICATIONS:", "\nALLERGIES:"])
 	
+	medsText = regexTheText(theText, startOfText: medsBeginning, endOfText: medsEnding)
+	medsText = cleanUpText(medsText, theWords: ["\(medsBeginning)", "\(medsEnding)"])
+	
+	allergiesText = regexTheText(theText, startOfText: allergiesBeginning, endOfText: allergiesEnding)
+	allergiesText = cleanUpText(allergiesText, theWords: ["\(allergiesBeginning)", "\(allergiesEnding)"])
+	
+	preventiveText = regexTheText(theText, startOfText: preventiveBeginning, endOfText: preventiveEnding)
+	preventiveText = cleanUpText(preventiveText, theWords: ["\(preventiveBeginning)", "\(preventiveEnding)"])
+	
+	pmhText = regexTheText(theText, startOfText: pmhBeginning, endOfText: pmhEnding)
+	pmhText = cleanUpText(pmhText, theWords: ["\(pmhBeginning)", "\(pmhEnding)"])
+	
+	pshText = regexTheText(theText, startOfText: pshBeginning, endOfText: pshEnding)
+	pshText = cleanUpText(pshText, theWords: ["\(pshBeginning)", "\(pshEnding)"])
+	
+	socialText = regexTheText(theText, startOfText: socialBeginning, endOfText: socialEnding)
+	socialText = cleanUpText(socialText, theWords: ["\(socialBeginning)", "\(socialEnding)"])
+	
+	nutritionText = regexTheText(theText, startOfText: nutritionBeginning, endOfText: nutritionEnding)
+	nutritionText = cleanUpText(nutritionText, theWords: ["\(nutritionBeginning)", "\(nutritionEnding)"])
+	
+	fmhText = regexTheText(theText, startOfText: fmhBeginning, endOfText: fmhEnding)
+	fmhText = cleanUpText(fmhText, theWords: ["\(fmhBeginning)", "\(fmhEnding)"])
+	
 	print(cheifComplaint)
 	print(subjectiveText)
 	print(problemsText)
@@ -99,8 +131,9 @@ func processPTVNText(theText: String) -> (cc: String, subjective: String, proble
 	print(assessmentText)
 	print(planText)
 	print(objectiveText)
+	print(medsText)
 	
-	return (cheifComplaint, subjectiveText, problemsText, newPMHText, assessmentText, planText, objectiveText)
+	return (cheifComplaint, subjectiveText, problemsText, newPMHText, assessmentText, planText, objectiveText, medsText, allergiesText, preventiveText, pmhText, pshText, socialText, nutritionText, fmhText)
 }
 
 func wordIsSpelledCorrect(word: String) -> Bool {
